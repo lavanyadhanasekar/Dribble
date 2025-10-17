@@ -1,5 +1,5 @@
 # Project Responsive Web Design using Bootstrap
-## Date:15.10.2025
+## Date:17.10.2025
 
 ## AIM:
 To create a simplified clone of Dribbble (https://dribbble.com/) landing page.
@@ -27,232 +27,137 @@ Publish the website in the LocalHost.
 
 ## PROGRAM :
 ```
-design.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sample Design</title>
+  <title>Bata</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      background-color: #f8f9fa;
-    }
-
-
     .navbar {
       background-color: blue;
-      flex-direction: column;
-      align-items: flex-start;
-      padding-left: 40px;
-      padding-top: 15px;
-      padding-bottom: 15px;
     }
-
-    .navbar-brand {
+    .navbar a, .navbar-brand {
+      color: white !important;
+    }
+    .banner {
+      background-color: #d9534f;
       color: white;
-      font-weight: bold;
-      font-size: 24px;
-    }
-
-    
-    .sub-links {
-      display: flex;
-      gap: 20px;
-      margin-top: 8px;
-    }
-
-    .sub-links a {
-      color: #ccc;
-      text-decoration: none;
-      font-size: 15px;
-      transition: all 0.3s ease;
-    }
-
-    .sub-links a:hover {
-      color: white;
-      text-decoration: underline;
-    }
-
-    
-    .controls {
       text-align: center;
-      margin: 25px 0;
+      padding: 20px 0;
     }
-
-    .controls a {
-      margin: 0 20px;
-      font-size: 18px;
-      color: #6c757d;
-      text-decoration: none;
-      position: relative;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
-
-    .controls a::after {
-      content: " ▼";
-      font-size: 12px;
-      color: #6c757d;
-    }
-    .me-4{
-      text-align: right;
-
-    }
-    .controls a:hover {
-      color: #000;
-      border-bottom: 3px solid #ff4081;
-      padding-bottom: 5px;
-    }
-
-    
     .card img {
-      transition: transform 0.3s ease;
+      height: 150px;
+      object-fit: cover;
     }
-
-    .card:hover img {
-      transform: scale(1.05);
-    }
-
-    .card {
-      border: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card-title {
-      font-weight: 600;
-      font-size: 15px;
-      color: #333;
-    }
-
-    
-
     footer {
       text-align: center;
       padding: 20px;
-      color: #333;
-      margin-top: 30px;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
-  
-  <nav class="navbar">
-    <div>
-      <a class="navbar-brand" href="#">bata</a>
-      <div class="sub-links">
-        <a href="#">Orders</a>
-        <a href="#">Cart</a>
-        <a href="#">Community</a>
-        <a href="#">Account</a>
+ 
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">bata</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+        </ul>
+        <div class="d-flex">
+          <a href="#" class="nav-link text-white">Sign up</a>
+          <a href="#" class="nav-link text-white">Sign in</a>
+        </div>
       </div>
     </div>
   </nav>
-  <div class="me-4">
-   <ul class="nav navbar-nav navbar-right">
-             <li>Sign up  &nbsp;
-         Sign in
-             </li>
-        </ul>
-        </div>
-</nav>
-
-  <nav class="nav navbar-default bg-danger text-white">
-    <ul class="nav navbar-nav mx-auto py-3">
-        <p class="text-center">What are you looking for? <span class="text-light">bata is awesome platform to buy anything</span></p>
-       <li> <button type="button" class="btn btn-primary text-white">Learn More</button>
-        <button type="button" class="btn btn-danger">Sign up</button></li>
-        
-    </ul>
-</nav>
-
 
   
-  <div class="controls">
-    <a href="#">Recent</a>
-    <a href="#">Popular</a>
-    <a href="#">Filters</a>
+  <div class="banner">
+    <p>What are you looking for? bata is awesome platform to buy anything</p>
+    <button class="btn btn-primary">Learn More</button>
+    <button class="btn btn-light">Sign up</button>
   </div>
 
   
-  <div class="container mt-4">
-    <div class="row g-4">
-      <!-- Repeat your image cards -->
-      <div class="col-lg-2 col-md-4 col-sm-6">
+  <div class="container text-center mt-4 mb-3">
+    <button class="btn btn-light dropdown-toggle me-2">Recent</button>
+    <button class="btn btn-light dropdown-toggle me-2">Popular</button>
+    <button class="btn btn-light dropdown-toggle">Filters</button>
+  </div>
+
+  
+  <div class="container">
+    <div class="row justify-content-center g-4">
+      <div class="col-md-2 col-sm-4">
         <div class="card">
-          <img src="Screenshot (93).png" class="card-img-top" alt="">
-          <div class="card-body">
-            <h6 class="card-title">sheo for men</h6>
-            
+          <img src="Screenshot (93).png" class="card-img-top" alt="Shoe for men">
+          <div class="card-body text-center">
+            <p class="card-text">shoe for men</p>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-2 col-md-4 col-sm-6">
+      <div class="col-md-2 col-sm-4">
         <div class="card">
-          <img src="Screenshot (94).png" class="card-img-top" alt="">
-          <div class="card-body">
-            <h6 class="card-title">boots</h6>
-            
-          </div>
-        </div> 
-      </div>
-
-      <div class="col-lg-2 col-md-4 col-sm-6">
-        <div class="card">
-          <img src="Screenshot (95).png" class="card-img-top" alt="">
-          <div class="card-body">
-            <h6 class="card-title">crocs</h6>
-            
+          <img src="Screenshot (94).png" class="card-img-top" alt="Boots">
+          <div class="card-body text-center">
+            <p class="card-text">boots</p>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-2 col-md-4 col-sm-6">
+      <div class="col-md-2 col-sm-4">
         <div class="card">
-          <img src="Screenshot (96).png" class="card-img-top" alt="">
-          <div class="card-body">
-            <h6 class="card-title">Slippers for girls</h6>
-            
+          <img src="Screenshot (95) - Copy.png" class="card-img-top" alt="Crocs">
+          <div class="card-body text-center">
+            <p class="card-text">crocs</p>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-2 col-md-4 col-sm-6">
+      <div class="col-md-2 col-sm-4">
         <div class="card">
-          <img src="Screenshot (97).png" class="card-img-top" alt="">
-          <div class="card-body">
-            <h6 class="card-title">girls sheo</h6>
-           
+          <img src="Screenshot (96).png" class="card-img-top" alt="Slippers for girls">
+          <div class="card-body text-center">
+            <p class="card-text">Slippers for girls</p>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-2 col-md-4 col-sm-6">
+      <div class="col-md-2 col-sm-4">
         <div class="card">
-          <img src="Screenshot (98).png" class="card-img-top" alt="">
-          <div class="card-body">
-            <h6 class="card-title">school sheo</h6>
-            
+          <img src="Screenshot (97).png" class="card-img-top" alt="Girls shoe">
+          <div class="card-body text-center">
+            <p class="card-text">girls shoe</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2 col-sm-4">
+        <div class="card">
+          <img src="Screenshot (98).png" class="card-img-top" alt="School shoe">
+          <div class="card-body text-center">
+            <p class="card-text">school shoe</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  
   <footer>
-    <p>© Designed by lavanya.D(25016895)</p>
+     Designed by Lavanya.D(25016895)
   </footer>
 
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
